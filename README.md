@@ -136,19 +136,19 @@ This section is organized according to the NeetCode roadmap.
 -   [Copy List with Random Pointer](./neetcode/linkedList/copyRanPointer.js)
 -   [Find the Duplicate Number](./neetcode/linkedList/findDuplicate.js)
 -   [Linked List Cycle](./neetcode/linkedList/hasCycle.js)
--   [Linked List Cycle](./neetcode/linkedList/hashCycle.go)
+-   [Linked List Cycle | go](./neetcode/linkedList/hashCycle.go)
 -   [Merge Two Sorted Lists](./neetcode/linkedList/mergeSortedLinked.js)
--   [Merge Two Sorted Lists](./neetcode/linkedList/mergeSortedLinked.go)
+-   [Merge Two Sorted Lists | go](./neetcode/linkedList/mergeSortedLinked.go)
 -   [Remove Nth Node From End of List](./neetcode/linkedList/removenth.js)
 -   [Reorder List](./neetcode/linkedList/reorderLinked.js)
--   [Reorder List](./neetcode/linkedList/reorderLinked.go)
+-   [Reorder List | go](./neetcode/linkedList/reorderLinked.go)
 -   [Reverse Linked List](./neetcode/linkedList/reverseLinked.js)
 
 #### Sliding Window
 
 -   [Best Time to Buy and Sell Stock](./neetcode/slidingWindow/BuyAndSell.js)
 -   [Longest Repeating Character Replacement](./neetcode/slidingWindow/longestRepeatingSub.js)
--w   [Minimum Window Substring](./neetcode/slidingWindow/minimumWinSub.js)
+-   [Minimum Window Substring](./neetcode/slidingWindow/minimumWinSub.js)
 -   [Permutation in String](./neetcode/slidingWindow/permutationString.js)
 -   [Sliding Window Maximum](./neetcode/slidingWindow/slidingWinMax.js)
 -   [Longest Substring Without Repeating Characters](./neetcode/slidingWindow/substringWithoutDup.js)
