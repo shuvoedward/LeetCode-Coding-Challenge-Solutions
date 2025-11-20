@@ -55,13 +55,14 @@ Below is a list of the problems solved in this repository, categorized by their 
 
 ### LeetCode 75
 
+-   [394. Decode String](./leetcode75/decodeString.go)
+-   [933. Number of Recent Calls](./leetcode75/933numberOfRecentCalls.go)
 -   [Asteroid Collision](./leetcode75/asteroidCollision.go)
 -   [Binary Tree Right Side View](./leetcode75/binaryTreeRightSideView.go)
 -   [Can Place Flowers](./leetcode75/canPlaceFlowers.go)
 -   [Keys and Rooms](./leetcode75/canVisitAllRooms.go)
 -   [Determine if Two Strings Are Close](./leetcode75/closeStrings.go)
 -   [Container With Most Water](./leetcode75/containerWater.go)
--   [Decode String](./leetcode75/decodeString.go)
 -   [Delete the Middle Node of a Linked List](./leetcode75/deleteMiddleLinked.go)
 -   [Delete Node in a Linked List](./leetcode75/deleteNode.go)
 -   [Find the Difference of Two Arrays](./leetcode75/differenceTwoArray.go)
@@ -135,9 +136,12 @@ This section is organized according to the NeetCode roadmap.
 -   [Copy List with Random Pointer](./neetcode/linkedList/copyRanPointer.js)
 -   [Find the Duplicate Number](./neetcode/linkedList/findDuplicate.js)
 -   [Linked List Cycle](./neetcode/linkedList/hasCycle.js)
+-   [Linked List Cycle](./neetcode/linkedList/hashCycle.go)
 -   [Merge Two Sorted Lists](./neetcode/linkedList/mergeSortedLinked.js)
+-   [Merge Two Sorted Lists](./neetcode/linkedList/mergeSortedLinked.go)
 -   [Remove Nth Node From End of List](./neetcode/linkedList/removenth.js)
 -   [Reorder List](./neetcode/linkedList/reorderLinked.js)
+-   [Reorder List](./neetcode/linkedList/reorderLinked.go)
 -   [Reverse Linked List](./neetcode/linkedList/reverseLinked.js)
 
 #### Sliding Window
