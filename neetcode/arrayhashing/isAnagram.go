@@ -27,3 +27,24 @@ func isAnagram(s, t string) bool {
 	return true
 
 }
+
+func isAnagramSingleArr(s, t string) bool {
+	if len(s) != len(t) {
+		return false
+	}
+
+	count := [26]int{}
+
+	for i := range len(s) {
+		count[s[i]-'a']++
+		count[t[i]-'a']--
+	}
+
+	for _, val := range count {
+		if val != 0 {
+			return false
+		}
+	}
+
+	return true
+}
