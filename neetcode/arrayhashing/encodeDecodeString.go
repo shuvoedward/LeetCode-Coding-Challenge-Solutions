@@ -1,6 +1,9 @@
 package arrayhashing
 
-import "strconv"
+import (
+	"strconv"
+	"strings"
+)
 
 type Solution struct{}
 
@@ -60,4 +63,39 @@ func (s *Solution) Decode(encoded string) []string {
 	}
 	return res
 
+}
+func encode(strs []string) string {
+	// 5#Hello5#World#2My
+	// s[2 : 5+1]
+	if len(strs) == 0 {
+		return ""
+	}
+
+	var encodeStr strings.Builder
+
+	for _, str := range strs {
+		l := len(str)
+		encodeStr.WriteString(strconv.Itoa(l))
+		encodeStr.WriteString("#")
+		encodeStr.WriteString(str)
+	}
+
+	return encodeStr.String()
+}
+
+func decode(encoded string) []string {
+	if len(encoded) == 0 {
+		return []string{}
+	}
+
+	result := []string{}
+	i := 0
+	for i < len(encoded) {
+		s := string(encoded[i])
+		l, _ := strconv.Atoi(s)
+		result = append(result, encoded[i+2:i+l+2])
+		i = i + l + 2
+	}
+
+	return result
 }

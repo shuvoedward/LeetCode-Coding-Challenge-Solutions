@@ -73,11 +73,38 @@ depth increases as we go down the tree, and the list res
 only grows one element per level — only once per depth.
 
 Let me know if you want a visual example to solidify it.
-
-
-
-
-
-
-
 */
+
+// My solution
+// In the queue, the last element for each level is the right side node
+func RightSideView(root *TreeNode) []int {
+	res := []int{}
+
+	if root == nil {
+		return res
+	}
+
+	queue := []*TreeNode{}
+	queue = append(queue, root)
+
+	for len(queue) > 0 {
+		l := len(queue)
+		for i := range l {
+			node := queue[0]
+			queue = queue[1:]
+
+			if node.Left != nil {
+				queue = append(queue, node.Left)
+			}
+			if node.Right != nil {
+				queue = append(queue, node.Right)
+			}
+
+			if i == l-1 {
+				res = append(res, node.Val)
+			}
+		}
+	}
+
+	return res
+}

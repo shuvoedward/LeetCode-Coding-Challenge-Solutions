@@ -2,27 +2,18 @@ package leetcode
 
 func IsValidParantheses(s string) bool {
 	stack := []rune{}
+	pairs := map[rune]rune{')': '(', ']': '[', '}': '{'}
 
-	pairs := map[rune]rune{
-		')': '(',
-		']': '[',
-		'}': '{',
-	}
-
-	for _, char := range s {
-		if openBracket, isClosingBracket := pairs[char]; isClosingBracket {
-			if len(stack) == 0 {
-				return false
-			}
-
-			if stack[len(stack)-1] != openBracket {
-				return false
-			}
-
-			stack = stack[:len(stack)-1]
+	for _, ch := range s {
+		if ch == '(' || ch == '{' || ch == '[' {
+			stack = append(stack, ch)
 		} else {
-			stack = append(stack, char)
+			if len(stack) == 0 || stack[len(stack)-1] != pairs[ch] {
+				return false
+			}
+			stack = stack[:len(stack)-1]
 		}
 	}
+
 	return len(stack) == 0
 }

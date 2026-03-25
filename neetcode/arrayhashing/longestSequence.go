@@ -107,3 +107,31 @@ func SequenceSet(nums []int) int {
 	}
 	return longest
 }
+
+func longestConsecutive(nums []int) int {
+	mp := map[int]bool{}
+	res := 0
+
+	for _, num := range nums {
+		mp[num] = true
+	}
+
+	for _, num := range nums {
+		curMax := 1
+		i := 1
+		if mp[num-1] {
+			continue
+		}
+
+		for mp[num+i] {
+			curMax++
+			i++
+		}
+
+		if curMax > res {
+			res = curMax
+		}
+	}
+
+	return res
+}
