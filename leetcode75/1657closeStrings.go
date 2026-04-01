@@ -1,6 +1,9 @@
 package leetcode75
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func CloseStrings(word1 string, word2 string) bool {
 	if len(word1) != len(word2) {
@@ -53,8 +56,39 @@ func CloseStrings(word1 string, word2 string) bool {
 	return true
 }
 
+func closeStringsOptimized(word1, word2 string) bool {
+	if len(word1) != len(word2) {
+		return false
+	}
+
+	freq1 := [26]int{}
+	freq2 := [26]int{}
+
+	for i := range len(word1) {
+		freq1[word1[i]-'a']++
+		freq2[word2[i]-'a']++
+	}
+
+	for i := range 26 {
+		if (freq1[i] == 0) != (freq2[i] == 0) {
+			return false
+		}
+	}
+
+	slices.Sort(freq1[:])
+	slices.Sort(freq2[:])
+
+	for i := range 26 {
+		if freq1[i] != freq2[i] {
+			return false
+		}
+	}
+
+	return true
+}
+
 func test() {
-	testCases := []struct {
+	tests := []struct {
 		word1    string
 		word2    string
 		expected bool
@@ -65,9 +99,9 @@ func test() {
 		{"cabbac", "abbaca", true},
 	}
 
-	for _, tc := range testCases {
-		result := CloseStrings(tc.word1, tc.word2)
+	for _, tt := range tests {
+		result := CloseStrings(tt.word1, tt.word2)
 		fmt.Printf("closeStrings(\"%s\", \"%s\") = %v (expected %v)\n",
-			tc.word1, tc.word2, result, tc.expected)
+			tt.word1, tt.word2, result, tt.expected)
 	}
 }

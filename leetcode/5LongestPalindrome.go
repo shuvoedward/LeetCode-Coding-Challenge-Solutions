@@ -31,5 +31,5 @@ func expand(s string, left, right int) int {
 		right++
 	}
 
-	return right - left + 1
+	return right - left - 1
 }
