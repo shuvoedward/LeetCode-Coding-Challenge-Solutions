@@ -1,4 +1,4 @@
-package twopointer
+package twoPointer
 
 // always one solution
 // no extra copy - no map, set

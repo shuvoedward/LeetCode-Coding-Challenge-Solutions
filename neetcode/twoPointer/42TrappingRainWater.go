@@ -1,4 +1,4 @@
-package twopointer
+package twoPointer
 
 // Hard
 

@@ -1,4 +1,4 @@
-package twopointer
+package twoPointer
 
 func maxArea(height []int) int {
 	l, r := 0, len(height)-1
