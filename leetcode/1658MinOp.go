@@ -37,4 +37,5 @@ func minOperations(nums []int, x int) int {
 	}
 
 	return len(nums) - maxlen
+
 }
