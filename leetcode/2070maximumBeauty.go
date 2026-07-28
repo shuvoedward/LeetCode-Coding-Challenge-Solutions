@@ -5,7 +5,6 @@ import (
 )
 
 func maximumBeauty(items [][]int, queries []int) []int {
-
 	sort.Slice(items, func(i, j int) bool {
 		return items[i][0] < items[j][0]
 	})
