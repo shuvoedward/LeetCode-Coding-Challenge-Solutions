@@ -1,5 +1,7 @@
 package binarysearch
 
+import "fmt"
+
 func findTarget(nums []int, target int) int {
 	l := 0
 	r := len(nums) - 1
@@ -28,4 +30,20 @@ func findTarget(nums []int, target int) int {
 	}
 
 	return -1
+}
+
+func Test_findTarget() {
+	tests := []struct {
+		nums     []int
+		target   int
+		expected int
+	}{
+		{nums: []int{4, 1, 2, 3}, target: 3, expected: 3},
+	}
+
+	for i, tt := range tests {
+		output := findTarget(tt.nums, tt.target)
+		fmt.Printf("%d. expected: %d, got: %d", i, tt.expected, output)
+	}
+
 }

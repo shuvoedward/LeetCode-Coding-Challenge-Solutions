@@ -1,6 +1,6 @@
 package main
 
-import dynamicprogramming "neetcode/dynamic_programming"
+import binarysearch "neetcode/binarySearch"
 
 func main() {
 	// result := arrayhashing.SequenceBruteForce([]int{2, 20, 4, 10, 3, 4, 5})
@@ -25,6 +25,6 @@ func main() {
 	// fmt.Println(res)
 	//
 
-	dynamicprogramming.Test_CoinChange()
+	binarysearch.Test_findTarget()
 
 }
