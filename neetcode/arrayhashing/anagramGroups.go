@@ -3,16 +3,16 @@ package arrayhashing
 func groupAnagrams(strs []string) [][]string {
 	/*
 
-	    [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0]: ["eat", "tea", "ate"],
-	    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0]: ["tan", "nat"],
-	    [0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]: ["bat"]
+		    [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0]: ["eat", "tea", "ate"],
+		    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0]: ["tan", "nat"],
+		    [0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]: ["bat"]
 
-		result := [][]string{
-		it is a slice that its elements are slices of strings
-	    {"eat", "tea", "ate"}, // First element, a slice of strings
-	    {"tan", "nat"},        // Second element, another slice of strings
-	    {"bat"},               // Third element, another slice of strings
-	}
+			result := [][]string{
+			it is a slice that its elements are slices of strings
+		    {"eat", "tea", "ate"}, // First element, a slice of strings
+		    {"tan", "nat"},        // Second element, another slice of strings
+		    {"bat"},               // Third element, another slice of strings
+		}
 
 
 	*/
@@ -32,6 +32,7 @@ func groupAnagrams(strs []string) [][]string {
 		result = append(result, group)
 	}
 	return result
+
 	/*
 	   const x = 3.14 type inference
 	   var x int

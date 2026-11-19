@@ -1,5 +1,7 @@
 package main
 
+import dynamicprogramming "neetcode/dynamic_programming"
+
 func main() {
 	// result := arrayhashing.SequenceBruteForce([]int{2, 20, 4, 10, 3, 4, 5})
 	// fmt.Println("result is ", result)
@@ -21,5 +23,8 @@ func main() {
 	// nums := []int{1, 2, 3, 4}
 	// // res := arrayhashing.Practice(nums)
 	// fmt.Println(res)
+	//
+
+	dynamicprogramming.Test_CoinChange()
 
 }
